@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "ClashGrotesk";
+  src: url("../../assets/fonts/ClashGrotesk-Variable.ttf");
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Clash Grotesk";
+  font-size: 3.125rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0;
+  line-height: 0.8;
+}
+
+h2 {
+  color: #fff;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Clash Grotesk";
+  font-size: 6.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+  line-height: 0.8;
+}
+
+h3 {
+  margin: 0;
+
+}
+
+h4 {
+  color: #FFF;
+leading-trim: both;
+text-edge: cap;
+font-family: "Clash Grotesk";
+font-size: 0.9375rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+  margin: 0;
+  line-height: 0.8;
+}
+
+p {
+  color: #fff;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Clash Grotesk";
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0;
+  line-height: 0.8;
+}

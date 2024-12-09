@@ -1,154 +1,6 @@
-body {
-  background-image: url(../../../assets/img/cloud.png);
-  background-size: cover;
-}
-
-.weather-main {
-  display: grid;
-  grid-gap: 1rem;
-  height: 100vh;
-  width: 100vw;
-  backdrop-filter: blur(2.5px);
-}
-
-.container-main {
-  margin: 10% 5%;
-  border-radius: 1.83581rem;
-  border: 1.224px solid rgba(255, 255, 255, 0.5);
-
-  background: linear-gradient(
-    177deg,
-    rgba(217, 217, 217, 0.4) 1.08%,
-    rgba(255, 255, 255, 0) 98.68%
-  );
-  box-shadow: 0px 4.896px 29.373px -1.224px rgba(0, 0, 0, 0.2);
-  display: flex;
-}
-
-.container-main_two {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  align-items: center;
-  padding: 2.5rem 0;
-}
-
-.infos-principales {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.infos-principales div {
-  gap: 0.9rem;
-  align-items: center;
-}
-
-.forecast_days-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.forecast_days-container h3 {
-  display: none;
-}
-
-.forecast_days-wrapper {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 0;
-  margin: 0;
-}
-
-.forecast_days-item {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.forecast_days-item img {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.forecast_days-item-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  text-align: left;
-}
-
-.forecast_days-item-text p {
-  margin: 0;
-  text-align: left;
-}
-
-.container-second {
-  display: none;
-}
-
-.forecast_hours-container {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  width: 85%;
-    justify-content: space-around;
-}
-
-.forecast_hours-item {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-}
-
-.forecast_hours-item img {
-  width: 1.2rem;
-  height: 1.2rem;
-}
-
-.forecast_hours-text {
-  color: rgba(255, 255, 255, 0.7);
-  text-align: center;
-  leading-trim: both;
-  text-edge: cap;
-  font-family: "Clash Grotesk";
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 200;
-  line-height: normal;
-}
-
-.forecast_hours-degrees {
-  color: rgba(255, 255, 255, 0.7);
-  text-align: center;
-  leading-trim: both;
-  text-edge: cap;
-  font-family: "Clash Grotesk";
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-
-@media (min-width: 1024px) {
-  .weather-main {
-    grid-template-columns: repeat(10, 1fr);
-  }
-  .container-main {
-    margin: 5%;
-    grid-column: 2 / span 8;
-  }
-  .container-main_two {
-    width: 25%;
+.main-container {
+    margin: 10% 5%;
     border-radius: 1.83581rem;
-    border: 1.224px solid rgba(255, 255, 255, 0.5);
     background: linear-gradient(
       177deg,
       rgba(217, 217, 217, 0.4) 1.08%,
@@ -156,7 +8,187 @@ body {
     );
     box-shadow: 0px 4.896px 29.373px -1.224px rgba(0, 0, 0, 0.2);
     display: flex;
+  }
+  
+  .city-selection-container {
+    width: 100%;
+    display: flex;
     flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    padding: 2.5rem 0;
+  }
+  
+  .current-weather {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .current-weather div {
+    gap: 0.9rem;
     align-items: center;
   }
-}
+  
+  .daily-forecast {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 75%;
+  }
+  
+  .daily-forecast h3 {
+    display: none;
+  }
+  
+  .daily-forecast-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+  
+  .daily-forecast-list > :nth-child(n+5) {
+    display: none;
+  }
+  
+  .daily-forecast-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .daily-forecast-item img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .daily-forecast-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+  }
+  
+  .daily-forecast-text p {
+    margin: 0;
+    text-align: left;
+  }
+  
+  .secondary-container {
+    display: none;
+  }
+  
+  .hourly-forecast {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 85%;
+    justify-content: space-around;
+  }
+  
+  .hourly-forecast-item {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .hourly-forecast-item img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  
+  .hourly-time {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Clash Grotesk";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+  }
+  
+  .hourly-temperature {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Clash Grotesk";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  @media (min-width: 1024px) {
+    .daily-forecast-item img {
+      margin: 0.5rem;
+    }
+    .weather-main {
+      grid-template-columns: repeat(10, 1fr);
+    }
+    .main-container {
+      margin: 5%;
+      grid-column: 2 / span 8;
+    }
+    .city-selection-container {
+      width: 25%;
+      border-radius: 1.83581rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5rem;
+    }
+    .city-selection-container > .hourly-forecast {
+      display: none;
+    }
+    .secondary-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 75%;
+      padding: 2.5rem 0;
+      justify-content: end;
+    }
+    .current-weather h1 {
+      display: none;
+    }
+    .current-weather div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .hourly-forecast {
+      display: flex;
+      padding: 0 1.75rem;
+      gap: 3rem;
+      justify-content: normal;
+    }
+    .daily-forecast h3 {
+      display: block;
+      color: #fff;
+      leading-trim: both;
+      text-edge: cap;
+      font-family: "Clash Grotesk";
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .daily-forecast-list {
+      gap: 1rem;
+      align-items: start;
+    }
+    .daily-forecast-list > :nth-child(n+5) {
+      display: flex;
+    }
+  }

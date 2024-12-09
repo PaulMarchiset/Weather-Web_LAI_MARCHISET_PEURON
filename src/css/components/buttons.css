@@ -15,3 +15,17 @@ select {
 	background-size: 0.8em auto;
 	background-position: 0.4em center;
 }
+
+/* custom select options */
+select option {
+  border: 1px solid #fff;
+  border-radius: 0.5rem;
+  color: #000;
+  background: none;
+}
+
+@media (min-width: 1024px) {
+  select {
+    width: 80%;
+  }
+}

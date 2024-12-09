@@ -8,69 +8,90 @@
   </head>
   <body>
     <main class="weather-main">
-      <div class="container-main">
-        <div class="container-main_two">
+      <div class="main-container">
+        <div class="city-selection-container">
           <select name="city" id="city">
             <option value="noisiel">Noisiel</option>
             <option value="champs">Champs-sur-Marne</option>
             <option value="pontault">Pontault-Combault</option>
           </select>
-          <div class="infos-principales">
+          <div class="current-weather">
             <h1>Pluvieux</h1>
             <div>
               <h2>20°C</h2>
               <p>Couvrez-vous</p>
             </div>
           </div>
-            <ul class="forecast_hours-container">
-                <li class="forecast_hours-item">
-                    <p class="forecast_hours-text">12:00</p>
-                    <img src="/assets/icons/sun.svg" alt=""/>
-                    <p class="forecast_hours-degrees">15°C</p>
-                </li>
-                <li class="forecast_hours-item">
-                    <p class="forecast_hours-text">12:00</p>
-                    <img src="/assets/icons/sun.svg" alt=""/>
-                    <p class="forecast_hours-degrees">15°C</p>
-                </li>
-                <li class="forecast_hours-item">
-                    <p class="forecast_hours-text">12:00</p>
-                    <img src="/assets/icons/sun.svg" alt=""/>
-                    <p class="forecast_hours-degrees">15°C</p>
-                </li>
-                <li class="forecast_hours-item">
-                    <p class="forecast_hours-text">12:00</p>
-                    <img src="/assets/icons/sun.svg" alt=""/>
-                    <p class="forecast_hours-degrees">15°C</p>
-                </li>
-            </ul>
-          <div class="forecast_days-container">
+          <ul class="hourly-forecast">
+            <li class="hourly-forecast-item">
+              <p class="hourly-time">12:00</p>
+              <img src="/assets/icons/sun.svg" alt="" />
+              <p class="hourly-temperature">15°C</p>
+            </li>
+            <li class="hourly-forecast-item">
+              <p class="hourly-time">12:00</p>
+              <img src="/assets/icons/sun.svg" alt="" />
+              <p class="hourly-temperature">15°C</p>
+            </li>
+            <li class="hourly-forecast-item">
+              <p class="hourly-time">12:00</p>
+              <img src="/assets/icons/sun.svg" alt="" />
+              <p class="hourly-temperature">15°C</p>
+            </li>
+            <li class="hourly-forecast-item">
+              <p class="hourly-time">12:00</p>
+              <img src="/assets/icons/sun.svg" alt="" />
+              <p class="hourly-temperature">15°C</p>
+            </li>
+          </ul>
+          <div class="daily-forecast">
             <h3>Les prochains jours</h3>
-            <ul class="forecast_days-wrapper">
-              <li class="forecast_days-item">
+            <ul class="daily-forecast-list">
+              <li class="daily-forecast-item">
                 <img src="/assets/icons/sun.svg" alt="" />
-                <div class="forecast_days-item-text">
+                <div class="daily-forecast-text">
                   <h4>Mercredi 27/11</h4>
                   <p>min °C, max °C</p>
                 </div>
               </li>
-              <li class="forecast_days-item">
+              <li class="daily-forecast-item">
                 <img src="/assets/icons/sun.svg" alt="" />
-                <div class="forecast_days-item-text">
+                <div class="daily-forecast-text">
                   <h4>Mercredi 27/11</h4>
                   <p>min °C, max °C</p>
                 </div>
               </li>
-              <li class="forecast_days-item">
+              <li class="daily-forecast-item">
                 <img src="/assets/icons/sun.svg" alt="" />
-                <div class="forecast_days-item-text">
+                <div class="daily-forecast-text">
                   <h4>Mercredi 27/11</h4>
                   <p>min °C, max °C</p>
                 </div>
               </li>
-              <li class="forecast_days-item">
+              <li class="daily-forecast-item">
                 <img src="/assets/icons/sun.svg" alt="" />
-                <div class="forecast_days-item-text">
+                <div class="daily-forecast-text">
+                  <h4>Mercredi 27/11</h4>
+                  <p>min °C, max °C</p>
+                </div>
+              </li>
+              <li class="daily-forecast-item">
+                <img src="/assets/icons/sun.svg" alt="" />
+                <div class="daily-forecast-text">
+                  <h4>Mercredi 27/11</h4>
+                  <p>min °C, max °C</p>
+                </div>
+              </li>
+              <li class="daily-forecast-item">
+                <img src="/assets/icons/sun.svg" alt="" />
+                <div class="daily-forecast-text">
+                  <h4>Mercredi 27/11</h4>
+                  <p>min °C, max °C</p>
+                </div>
+              </li>
+              <li class="daily-forecast-item">
+                <img src="/assets/icons/sun.svg" alt="" />
+                <div class="daily-forecast-text">
                   <h4>Mercredi 27/11</h4>
                   <p>min °C, max °C</p>
                 </div>
@@ -78,8 +99,53 @@
             </ul>
           </div>
         </div>
+        <div class="secondary-container">
+          <h1>Pluvieux</h1>
+          <ul class="hourly-forecast">
+            <li class="hourly-forecast-item">
+              <p class="hourly-time">12:00</p>
+              <img src="/assets/icons/sun.svg" alt="" />
+              <p class="hourly-temperature">15°C</p>
+            </li>
+            <li class="hourly-forecast-item">
+              <p class="hourly-time">12:00</p>
+              <img src="/assets/icons/sun.svg" alt="" />
+              <p class="hourly-temperature">15°C</p>
+            </li>
+            <li class="hourly-forecast-item">
+              <p class="hourly-time">12:00</p>
+              <img src="/assets/icons/sun.svg" alt="" />
+              <p class="hourly-temperature">15°C</p>
+            </li>
+            <li class="hourly-forecast-item">
+              <p class="hourly-time">12:00</p>
+              <img src="/assets/icons/sun.svg" alt="" />
+              <p class="hourly-temperature">15°C</p>
+            </li>
+            <li class="hourly-forecast-item">
+              <p class="hourly-time">12:00</p>
+              <img src="/assets/icons/sun.svg" alt="" />
+              <p class="hourly-temperature">15°C</p>
+            </li>
+            <li class="hourly-forecast-item">
+              <p class="hourly-time">12:00</p>
+              <img src="/assets/icons/sun.svg" alt="" />
+              <p class="hourly-temperature">15°C</p>
+            </li>
+            <li class="hourly-forecast-item">
+              <p class="hourly-time">12:00</p>
+              <img src="/assets/icons/sun.svg" alt="" />
+              <p class="hourly-temperature">15°C</p>
+            </li>
+            <li class="hourly-forecast-item">
+              <p class="hourly-time">12:00</p>
+              <img src="/assets/icons/sun.svg" alt="" />
+              <p class="hourly-temperature">15°C</p>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="container-second"></div>
     </main>
+    <script src="/src/js/script.js"></script>
   </body>
 </html>

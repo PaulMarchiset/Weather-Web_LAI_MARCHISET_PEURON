@@ -9,7 +9,7 @@ select {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  background-image: url("/assets/icons/location.svg");
+  background-image: url("../../../assets/icons/location.svg");
   background-repeat: no-repeat;
 	background-size: 0.8em auto;
 	background-position: 0.4em center;

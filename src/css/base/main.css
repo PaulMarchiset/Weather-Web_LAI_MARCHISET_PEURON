@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Clash Grotesk";
-  src: url("/assets/fonts/ClashGrotesk-Variable.ttf");
+  src: url("../../../assets/fonts/ClashGrotesk-Variable.ttf");
 }
 
 body {
-  background-image: url(/assets/img/cloud.png);
+  background-image: url("../../../assets/img/cloud.png");
   background-size: cover;
   font-family: "Clash Grotesk";
 }

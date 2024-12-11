@@ -9,6 +9,12 @@ body {
   font-family: "Clash Grotesk";
 }
 
+#homepage {
+  background: radial-gradient(54.89% 43.59% at 71.42% 79.54%, #D1DFF9 0%, #FEFDFC 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .weather-main {
   display: grid;
   grid-gap: 1rem;
@@ -70,6 +76,63 @@ p {
   line-height: normal;
   margin: 0;
   line-height: 0.8;
+}
+
+#home-main {
+  display: flex;
+  justify-content: center;
+}
+
+main > div {
+  margin-top: 15.25rem;
+  margin-left: 18.25rem;
+  margin-right: 18.25rem;
+  margin-bottom: 15.40rem;
+}
+
+#hello {
+  color: #000;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#home-main > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 55rem;
+}
+
+#home-menu {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 4.25rem;
+}
+
+#home-menu > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17rem;
+  height: 18.4rem;
+  border-radius: 1.84rem;
+  opacity: 0.48;
+  background: linear-gradient(177deg, rgba(217, 217, 217, 0.40) 1.08%, rgba(255, 255, 255, 0.00) 98.68%);
+  box-shadow: 0px 5px 30px -1.2px rgba(0, 0, 0, 0.20);
+  backdrop-filter: blur(24.5px);
+}
+
+.menu-text {
+  color: #000;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  text-decoration-line: none;
 }
 
 @media (min-width: 1024px) {

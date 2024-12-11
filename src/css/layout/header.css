@@ -8,10 +8,6 @@ nav {
     justify-content: center;
 }
 
-nav > div {
-    margin-top: 3.75rem;
-}
-
 #logo {
     color: #000;
     text-align: center;

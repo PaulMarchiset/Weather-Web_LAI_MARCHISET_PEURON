@@ -20,8 +20,7 @@ body {
 h1 {
   color: #fff;
   text-align: center;
-  leading-trim: both;
-  text-edge: cap;
+   
   font-family: "Clash Grotesk";
   font-size: 3.125rem;
   font-style: normal;
@@ -34,8 +33,7 @@ h1 {
 h2 {
   color: #fff;
   text-align: center;
-  leading-trim: both;
-  text-edge: cap;
+   
   font-family: "Clash Grotesk";
   font-size: 6.25rem;
   font-style: normal;
@@ -51,8 +49,7 @@ h3 {
 
 h4 {
   color: #fff;
-  leading-trim: both;
-  text-edge: cap;
+   
   font-family: "Clash Grotesk";
   font-size: 1rem;
   font-style: normal;
@@ -65,8 +62,7 @@ h4 {
 p {
   color: #fff;
   text-align: center;
-  leading-trim: both;
-  text-edge: cap;
+   
   font-family: "Clash Grotesk";
   font-size: 0.75rem;
   font-style: normal;
@@ -79,8 +75,6 @@ p {
 @media (min-width: 1024px) {
   h1 {
     color: #fff;
-    leading-trim: both;
-    text-edge: cap;
     font-family: "Clash Grotesk";
     font-size: 6.25rem;
     font-style: normal;

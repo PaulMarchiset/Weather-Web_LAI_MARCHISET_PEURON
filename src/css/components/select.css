@@ -5,6 +5,7 @@ select {
   width: 60%;
   color: #fff;
   background: none;
+  font-family: "Clash Grotesk";
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
@@ -20,6 +21,7 @@ select option {
   border: 1px solid #fff;
   border-radius: 0.5rem;
   color: #000;
+  font-family: "Clash Grotesk";
   background: none;
 }
 

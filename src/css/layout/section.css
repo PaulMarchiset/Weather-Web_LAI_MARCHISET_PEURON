@@ -51,9 +51,9 @@
     align-items: center;
   }
   
-  .daily-forecast-list > :nth-child(n+5) {
+  /* .daily-forecast-list > :nth-child(n+5) {
     display: none;
-  }
+  } */
   
   .daily-forecast-item {
     display: flex;
@@ -108,8 +108,6 @@
   .hourly-time {
     color: rgba(255, 255, 255, 0.7);
     text-align: center;
-    leading-trim: both;
-    text-edge: cap;
     font-family: "Clash Grotesk";
     font-size: 1rem;
     font-style: normal;
@@ -120,8 +118,6 @@
   .hourly-temperature {
     color: rgba(255, 255, 255, 0.7);
     text-align: center;
-    leading-trim: both;
-    text-edge: cap;
     font-family: "Clash Grotesk";
     font-size: 1rem;
     font-style: normal;
@@ -176,8 +172,6 @@
     .daily-forecast h3 {
       display: block;
       color: #fff;
-      leading-trim: both;
-      text-edge: cap;
       font-family: "Clash Grotesk";
       font-size: 1.25rem;
       font-style: normal;

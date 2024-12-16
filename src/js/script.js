@@ -1,8 +1,10 @@
 const API_KEY = "deb33e8e2b734e5aabe150423240812";
 
-const API_URL_CURRENT = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}`;
+const API_URL_CURRENT = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&lang=fr`;
 
-const API_URL_FORECAST = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}`;
+const API_URL_FORECAST = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&lang=fr`;
+
+// const conditions = `https://www.weatherapi.com/docs/weather_conditions.json`;
 
 const current_temp = document.getElementById("current_temp");
 var current_condition = document.getElementsByName("current_condition");
@@ -19,6 +21,8 @@ const forecast_time = document.getElementsByClassName("forecast-time");
 const forecast_temp = document.getElementsByClassName("forecast-temperature");
 const forecast_icon = document.getElementsByClassName("forecast-icon");
 
+const backgroundImage = document.getElementById("background-image");
+
 document.getElementById("city").addEventListener("change", async function () {
     const city = document.getElementById("city").value;
 
@@ -26,6 +30,11 @@ document.getElementById("city").addEventListener("change", async function () {
     const data_current = await response_current.json();
 
     console.log(data_current);
+
+    // const response_conditions = await fetch(conditions);
+    // const data_conditions = await response_conditions.json();
+    
+    // console.log(data_conditions);
 
     current_temp.innerHTML = data_current.current.temp_c + "°C";
 
@@ -39,7 +48,7 @@ document.getElementById("city").addEventListener("change", async function () {
     const formattedTime = `${hour}:${minute < 10 ? "0" : ""}${minute}`;
 
     if (window.innerWidth < 768) {
-        for (let i = 0; i < 8; i++) {
+        for (let i = 0; i < 4; i++) {
             const forecastHour = (hour + i + 1) % 24;
             const response_forecast = await fetch(API_URL_FORECAST + "&q=" + city + "&hour=" + forecastHour);
             const data_forecast = await response_forecast.json();
@@ -71,5 +80,13 @@ document.getElementById("city").addEventListener("change", async function () {
         console.log(data_forecast.forecast.forecastday[i]);
         forecast_temp[i].innerHTML = data_forecast.forecast.forecastday[i].day.mintemp_c + "°C, " + data_forecast.forecast.forecastday[i].day.maxtemp_c + "°C";
         forecast_icon[i].src = data_forecast.forecast.forecastday[i].day.condition.icon ;
+    }
+
+    if (data_current.current.condition.text === "Couvert") {
+        backgroundImage.style.backgroundColor = "#42C6FF";
+    } else if (data_current.current.condition.text === "Nuage") {
+        backgroundImage.style.backgroundColor = "#42C6FF";
+    } else if (data_current.current.condition.text === "Plu") {
+        backgroundImage.style.backgroundColor = "#FF64D4" ;
     }
 });

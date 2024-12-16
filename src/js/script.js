@@ -9,12 +9,15 @@ var current_condition = document.getElementsByName("current_condition");
 
 const hourly_forecast = document.getElementsByClassName("hourly-time");
 const hourly_temp = document.getElementsByClassName("hourly-temperature");
+const hourly_icon = document.getElementsByClassName("hourly-icon");
 
 const hourly_forecast_mobile = document.getElementsByClassName("hourly-time-mobile");
 const hourly_temp_mobile = document.getElementsByClassName("hourly-temperature-mobile");
+const hourly_icon_mobile = document.getElementsByClassName("hourly-icon");
 
 const forecast_time = document.getElementsByClassName("forecast-time");
 const forecast_temp = document.getElementsByClassName("forecast-temperature");
+const forecast_icon = document.getElementsByClassName("forecast-icon");
 
 document.getElementById("city").addEventListener("change", async function () {
     const city = document.getElementById("city").value;
@@ -43,6 +46,7 @@ document.getElementById("city").addEventListener("change", async function () {
             hourly_forecast_mobile[i].innerHTML = forecastHour + ":00";
             hourly_temp_mobile[i].innerHTML =
                 data_forecast.forecast.forecastday[0].day.avgtemp_c + "°C";
+            hourly_icon[i].src =  data_forecast.forecast.forecastday[0].day.condition.icon ;
         }
     } else {
         for (let i = 0; i < 8; i++) {
@@ -52,6 +56,7 @@ document.getElementById("city").addEventListener("change", async function () {
             hourly_forecast[i].innerHTML = forecastHour + ":00";
             hourly_temp[i].innerHTML =
                 data_forecast.forecast.forecastday[0].day.avgtemp_c + "°C";
+            hourly_icon[i].src =  data_forecast.forecast.forecastday[0].day.condition.icon ;
         }
     }
 
@@ -65,5 +70,6 @@ document.getElementById("city").addEventListener("change", async function () {
         forecast_time[i].innerHTML = date.toLocaleDateString(undefined, options);
         console.log(data_forecast.forecast.forecastday[i]);
         forecast_temp[i].innerHTML = data_forecast.forecast.forecastday[i].day.mintemp_c + "°C, " + data_forecast.forecast.forecastday[i].day.maxtemp_c + "°C";
+        forecast_icon[i].src = data_forecast.forecast.forecastday[i].day.condition.icon ;
     }
 });

@@ -6,16 +6,21 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="../src/css/style.css" />
   </head>
-  <body id="background-image">
+  <body id="weatherBGColor">
+    <header>
+      <a id="logo" href="../../index.html">weather app</a>
+</header>
     <main class="weather-main">
       <div class="main-container">
         <div class="city-selection-container">
           <select name="city" id="city">
-            <option value="Noisiel">Noisiel</option>
             <option value="Champs-sur-Marne">Champs-sur-Marne</option>
-            <option value="Pontault-Combault">Pontault-Combault</option>
-            <option value="Bergen">Bergen (NO)</option>
-            <option value="Madrid">Madrid (ES)</option>
+            <option value="Helsinki">Helsinki (FI)</option>
+            <option value="Montreal">Montréal (CA)</option>
+            <option value="New York">New York (US)</option>
+            <option value="Rio De Janeiro">Rio De Janeiro (BR)</option>
+            <option value="Sydney">Sydney (AU)</option>
+            <option value="Tokyo">Tokyo (JP)</option>
           </select>
           <div class="current-weather">
             <h1 name="current_condition">Pluvieux</h1>
@@ -148,6 +153,19 @@
         </div>
       </div>
     </main>
+    <footer>
+      <div>
+        <div>
+          <a class="foot-text" href="../pages/about.html">à propos</a>
+        </div>
+        <div>
+          <a class="foot-text" href="../pages/legals.html">mentions légales</a>
+        </div>
+        <div>
+          <a class="foot-text" href="../pages/contact.html">contact</a>
+        </div>
+      </div>
+    </footer>
     <script src="/src/js/script.js"></script>
   </body>
 </html>

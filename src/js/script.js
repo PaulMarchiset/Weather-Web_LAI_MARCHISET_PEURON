@@ -4,8 +4,6 @@ const API_URL_CURRENT = `http://api.weatherapi.com/v1/current.json?key=${API_KEY
 
 const API_URL_FORECAST = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&lang=fr`;
 
-// const conditions = `https://www.weatherapi.com/docs/weather_conditions.json`;
-
 const current_temp = document.getElementById("current_temp");
 var current_condition = document.getElementsByName("current_condition");
 
@@ -26,7 +24,7 @@ const forecast_time = document.getElementsByClassName("forecast-time");
 const forecast_temp = document.getElementsByClassName("forecast-temperature");
 const forecast_icon = document.getElementsByClassName("forecast-icon");
 
-const backgroundImage = document.getElementById("background-image");
+const weatherBGColor = document.getElementById("weatherBGColor");
 
 const forecastItems = document.getElementsByClassName("daily-forecast-item");
 
@@ -101,15 +99,15 @@ async function loadWeather(city) {
     const conditionCode = data_current.current.condition.code;
 
     if (conditionCode == 1000) {
-        backgroundImage.style.backgroundColor = "#FFE142";
+        weatherBGColor.style.backgroundColor = "#FFE142";
     }
 
     if (conditionCode >= 1003 && conditionCode <= 1030) {
-        backgroundImage.style.backgroundColor = "#42C6FF";
+        weatherBGColor.style.backgroundColor = "#42C6FF";
     }
 
     if (conditionCode >= 1063 && conditionCode <= 1282) {
-        backgroundImage.style.backgroundColor = "#FF64D4";
+        weatherBGColor.style.backgroundColor = "#FF64D4";
     }
 }
 

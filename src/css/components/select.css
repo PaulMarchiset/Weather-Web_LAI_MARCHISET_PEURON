@@ -1,9 +1,9 @@
 select {
   padding: 1rem 1.75rem;
   border-radius: 0.5rem;
-  border: 1px solid #fff;
+  border: 1px solid var(--color-primary);
   width: 60%;
-  color: #fff;
+  color: var(--color-primary);
   background: none;
   font-family: "Clash Grotesk";
   font-size: 1.125rem;
@@ -18,7 +18,7 @@ select {
 
 /* custom select options */
 select option {
-  border: 1px solid #fff;
+  border: 1px solid var(--color-primary);
   border-radius: 0.5rem;
   color: #000;
   font-family: "Clash Grotesk";

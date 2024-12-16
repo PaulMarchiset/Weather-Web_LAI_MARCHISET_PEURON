@@ -158,6 +158,10 @@
       padding: 2.5rem 0;
       justify-content: end;
     }
+
+    .secondary-container h1 {
+      text-align: left;
+    }
     .current-weather h1 {
       display: none;
     }

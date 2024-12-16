@@ -11,15 +11,15 @@ var current_condition = document.getElementsByName("current_condition");
 
 const hourly_forecast = document.getElementsByClassName("hourly-time");
 const hourly_temp = document.getElementsByClassName("hourly-temperature");
+const hourly_icon = document.getElementsByClassName("hourly-icon");
 
-const hourly_forecast_mobile =
-  document.getElementsByClassName("hourly-time-mobile");
-const hourly_temp_mobile = document.getElementsByClassName(
-  "hourly-temperature-mobile"
-);
+const hourly_forecast_mobile = document.getElementsByClassName("hourly-time-mobile");
+const hourly_temp_mobile = document.getElementsByClassName("hourly-temperature-mobile");
+const hourly_icon_mobile = document.getElementsByClassName("hourly-icon");
 
 const forecast_time = document.getElementsByClassName("forecast-time");
 const forecast_temp = document.getElementsByClassName("forecast-temperature");
+const forecast_icon = document.getElementsByClassName("forecast-icon");
 
 const backgroundImage = document.getElementById("background-image");
 
@@ -47,56 +47,48 @@ document.getElementById("city").addEventListener("change", async function () {
   const minute = date.getMinutes();
   const formattedTime = `${hour}:${minute < 10 ? "0" : ""}${minute}`;
 
-  if (window.innerWidth < 768) {
-    for (let i = 0; i < 4; i++) {
-      const forecastHour = (hour + i + 1) % 24;
-      const response_forecast = await fetch(
-        API_URL_FORECAST + "&q=" + city + "&hour=" + forecastHour
-      );
-      const data_forecast = await response_forecast.json();
-      hourly_forecast_mobile[i].innerHTML = forecastHour + ":00";
-      hourly_temp_mobile[i].innerHTML =
-        data_forecast.forecast.forecastday[0].day.avgtemp_c + "°C";
+    if (window.innerWidth < 768) {
+        for (let i = 0; i < 4; i++) {
+            const forecastHour = (hour + i + 1) % 24;
+            const response_forecast = await fetch(API_URL_FORECAST + "&q=" + city + "&hour=" + forecastHour);
+            const data_forecast = await response_forecast.json();
+            hourly_forecast_mobile[i].innerHTML = forecastHour + ":00";
+            hourly_temp_mobile[i].innerHTML =
+                data_forecast.forecast.forecastday[0].day.avgtemp_c + "°C";
+            hourly_icon[i].src =  data_forecast.forecast.forecastday[0].day.condition.icon ;
+        }
+    } else {
+        for (let i = 0; i < 8; i++) {
+            const forecastHour = (hour + i + 1) % 24;
+            const response_forecast = await fetch(API_URL_FORECAST + "&q=" + city + "&hour=" + forecastHour);
+            const data_forecast = await response_forecast.json();
+            hourly_forecast[i].innerHTML = forecastHour + ":00";
+            hourly_temp[i].innerHTML =
+                data_forecast.forecast.forecastday[0].day.avgtemp_c + "°C";
+            hourly_icon[i].src =  data_forecast.forecast.forecastday[0].day.condition.icon ;
+        }
     }
-  } else {
-    for (let i = 0; i < 8; i++) {
-      const forecastHour = (hour + i + 1) % 24;
-      const response_forecast = await fetch(
-        API_URL_FORECAST + "&q=" + city + "&hour=" + forecastHour
-      );
-      const data_forecast = await response_forecast.json();
-      hourly_forecast[i].innerHTML = forecastHour + ":00";
-      hourly_temp[i].innerHTML =
-        data_forecast.forecast.forecastday[0].day.avgtemp_c + "°C";
-    }
-  }
 
   const response_forecast = await fetch(
     API_URL_FORECAST + "&q=" + city + "&days=7"
   );
   const data_forecast = await response_forecast.json();
 
-  for (let i = 0; i < 7; i++) {
-    forecast_time[i].innerHTML =
-      data_forecast.forecast.forecastday[i].date_epoch;
-    const date = new Date(
-      data_forecast.forecast.forecastday[i].date_epoch * 1000
-    );
-    const options = { weekday: "long", day: "numeric", month: "numeric" };
-    forecast_time[i].innerHTML = date.toLocaleDateString(undefined, options);
-    console.log(data_forecast.forecast.forecastday[i]);
-    forecast_temp[i].innerHTML =
-      data_forecast.forecast.forecastday[i].day.mintemp_c +
-      "°C, " +
-      data_forecast.forecast.forecastday[i].day.maxtemp_c +
-      "°C";
-  }
+    for (let i = 0; i < 7; i++) {
+        forecast_time[i].innerHTML = data_forecast.forecast.forecastday[i].date_epoch;
+        const date = new Date(data_forecast.forecast.forecastday[i].date_epoch * 1000);
+        const options = { weekday: 'long', day: 'numeric', month: 'numeric' };
+        forecast_time[i].innerHTML = date.toLocaleDateString(undefined, options);
+        console.log(data_forecast.forecast.forecastday[i]);
+        forecast_temp[i].innerHTML = data_forecast.forecast.forecastday[i].day.mintemp_c + "°C, " + data_forecast.forecast.forecastday[i].day.maxtemp_c + "°C";
+        forecast_icon[i].src = data_forecast.forecast.forecastday[i].day.condition.icon ;
+    }
 
-  if (data_current.current.condition.text === "Soleil" || "soleil") {
-    backgroundImage.style.backgroundColor = "#ffe142";
-  } else if (data_current.current.condition.text === "Nuage" || "Couvert") {
-    backgroundImage.style.backgroundColor = "#42C6FF";
-  } else if (data_current.current.condition.text === "Plu" || "neige") {
-    backgroundImage.style.backgroundColor = "#FF64D4";
-  }
+    if (data_current.current.condition.text === "Couvert") {
+        backgroundImage.style.backgroundColor = "#42C6FF";
+    } else if (data_current.current.condition.text === "Nuage") {
+        backgroundImage.style.backgroundColor = "#42C6FF";
+    } else if (data_current.current.condition.text === "Plu") {
+        backgroundImage.style.backgroundColor = "#FF64D4" ;
+    }
 });

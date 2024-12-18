@@ -17,4 +17,11 @@ nav {
     line-height: normal;
     text-transform: uppercase;
     text-decoration-line: none;
+
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+#logo:hover {
+    transform: scaleX(1.1);
 }

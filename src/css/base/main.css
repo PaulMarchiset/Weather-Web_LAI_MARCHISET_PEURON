@@ -22,11 +22,13 @@ body {
   background: radial-gradient(54.89% 43.59% at 71.42% 79.54%, #D1DFF9 0%, #FEFDFC 100%);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  gap: 4.5rem;
 }
 
 .weather-main {
@@ -99,6 +101,10 @@ p {
   font-weight: 400;
   line-height: normal;
   padding: 0;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
 }
 
 #home-main > div {
@@ -114,6 +120,10 @@ p {
   align-items: center;
   flex-direction: column;
   gap: 1.25rem;
+
+  opacity:0;
+  transform: scale(0.8);
+  transition: all 1s ease;
 }
 
 #home-menu > div {

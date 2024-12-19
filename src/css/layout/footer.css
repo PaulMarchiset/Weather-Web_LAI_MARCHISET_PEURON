@@ -6,13 +6,13 @@
 footer {
     display: flex;
     justify-content: center;
-    width: 25%;
+    width: 100%;
 }
 
 footer > div {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .foot-text {
@@ -24,4 +24,10 @@ footer > div {
     line-height: normal;
     text-transform: uppercase;
     text-decoration-line: none;
+}
+
+@media (min-width: 1024px) {
+    footer > div {
+        width: 60%;
+    }
 }

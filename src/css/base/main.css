@@ -89,13 +89,13 @@ p {
   line-height: 0.8;
 }
 
-#home-main {
+.home-main {
   display: flex;
   justify-content: center;
 }
 
 #hello {
-  color: #000;
+  color: var(--color-primary);
   font-size: 1.875rem;
   font-style: normal;
   font-weight: 400;
@@ -107,10 +107,11 @@ p {
   transition: all 1s ease;
 }
 
-#home-main > div {
+.home-main > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 2.5rem;
 }
 
@@ -156,6 +157,39 @@ p {
   text-transform: capitalize;
 }
 
+.page-title {
+  color: var(--color-primary);
+  text-align: center;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18.75rem;
+}
+
+.text-pages {
+  color: var(--color-primary);
+  text-align: start;
+  font-size: 0.95rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.text-pages > span{
+  font-weight: 500;
+}
+
+.legal-text {
+  font-size: 1.25rem;
+}
+
 @media (min-width: 1024px) {
   .weather-main {
     width: 100vw;
@@ -179,5 +213,11 @@ p {
   }
   #home-menu {
     flex-direction: row;
+  }
+  .page-title {
+    font-size: 2.5rem;
+  }
+  #about {
+    width: 32rem;
   }
 }

@@ -9,6 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             homeMenu.style.opacity = "1";
             homeMenu.style.transform = "scale(1)";
-        }, 1000)
-    }, 500);
+        }, 400)
+    }, 300);
 });

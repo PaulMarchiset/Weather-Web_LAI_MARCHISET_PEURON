@@ -124,7 +124,7 @@ p {
 
   opacity:0;
   transform: scale(0.8);
-  transition: all 1s ease;
+  transition: opacity 0.5s ease, transform 1s ease;
 }
 
 #home-menu > div {
@@ -188,6 +188,14 @@ p {
 
 .legal-text {
   font-size: 1.25rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #hello, #home-menu {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 @media (min-width: 1024px) {

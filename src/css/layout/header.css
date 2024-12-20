@@ -3,6 +3,10 @@
     src: url("../../../assets/fonts/ClashGrotesk-Variable.ttf");
 }
 
+header {
+    padding-top: 2rem;
+}
+
 #logo {
     color: #000;
     text-align: center;
@@ -14,9 +18,9 @@
     text-decoration-line: none;
 
     display: inline-block;
-    transition: transform 0.3s ease-in-out;
+    transition: letter-spacing 0.3s ease-in-out;
 }
 
 #logo:hover {
-    transform: scaleX(1.1);
+    letter-spacing: .1rem;
 }

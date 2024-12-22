@@ -36,7 +36,7 @@ if (window.innerHeight < 768 || window.innerWidth < 768) {
 }
 
 async function loadWeather(city) {
-  loader.style.display = "flex";
+//   loader.style.display = "flex";
   const response_current = await fetch(API_URL_CURRENT + "&q=" + city);
   const data_current = await response_current.json();
 

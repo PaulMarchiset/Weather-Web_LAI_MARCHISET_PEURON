@@ -36,6 +36,7 @@ if (window.innerHeight < 768 || window.innerWidth < 768) {
 }
 
 async function loadWeather(city) {
+  loader.style.display = "flex";
   const response_current = await fetch(API_URL_CURRENT + "&q=" + city);
   const data_current = await response_current.json();
 
@@ -141,6 +142,8 @@ async function loadWeather(city) {
   if (conditionCode >= 1063 && conditionCode <= 1282) {
     weatherBGColor.style.backgroundColor = "#FF64D4";
   }
+
+  loader.style.display = "none";
 }
 
 document.getElementById("city").addEventListener("change", function () {

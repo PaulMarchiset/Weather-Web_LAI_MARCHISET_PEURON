@@ -96,7 +96,7 @@ async function loadWeather(city) {
       hourly_forecast[i].innerHTML = forecastHour + ":00";
       hourly_temp[i].innerHTML =
         data_forecast.forecast?.forecastday[0]?.day?.avgtemp_c + "°C";
-      hourly_icon[i].src =
+      hourly_icon[i].src = "http:" +
         data_forecast.forecast?.forecastday[0]?.day?.condition?.icon;
     }
   }
@@ -124,7 +124,7 @@ async function loadWeather(city) {
       "°C, " +
       data_forecast.forecast?.forecastday[i]?.day?.maxtemp_c +
       "°C";
-    forecast_icon[i].src =
+    forecast_icon[i].src = "http:" +
       data_forecast.forecast?.forecastday[i]?.day?.condition?.icon;
   }
 

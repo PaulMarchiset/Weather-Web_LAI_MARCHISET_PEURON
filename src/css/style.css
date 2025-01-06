@@ -3,7 +3,6 @@
 
 /*base*/
 @import "base/main.css";
-@import "base/media.css";
 
 /*layout*/
 @import "layout/header.css";
@@ -11,6 +10,5 @@
 @import "layout/section.css";
 
 /*components*/
-@import "components/cards.css";
 @import "components/select.css";
 @import "components/form.css";

@@ -155,7 +155,7 @@ p {
 }
 
 .menu-text {
-  color: #000;
+  color: var(--color-primary);
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
